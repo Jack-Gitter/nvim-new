@@ -10,3 +10,5 @@ require("config.oil.keymaps")
 -------- Lspconfig -------- 
 require("config.lspconfig.setup")
 
+-------- Fzf -------- 
+require("config.fzf.keymaps")
