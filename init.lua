@@ -1,3 +1,6 @@
+--------  General -------- 
+require("config.general.settings")
+
 --------  Lazy -------- 
 require("config.lazy.setup")
 
