@@ -1,12 +1,6 @@
 -- return {"navarasu/onedark.nvim", opts = {}}
-
-return {
- 'ribru17/bamboo.nvim',
-  config = function()
-     require('bamboo').setup({})
-     require('bamboo').load()
-   end,
-}
+return {'ribru17/bamboo.nvim', config = function() require('bamboo').setup({}) require('bamboo').load() end}
+-- return { "ellisonleao/gruvbox.nvim", config = function () vim.cmd([[colorscheme gruvbox]]) end, opts = {}}
 
 
 
