@@ -1,6 +1,9 @@
 --------  Lazy -------- 
-require("config.lazy")
+require("config.lazy.setup")
 
 -------- Oil -------- 
 require("config.oil.keymaps")
-require("config.oil.setup")
+
+-------- Lspconfig -------- 
+require("config.lspconfig.setup")
+
