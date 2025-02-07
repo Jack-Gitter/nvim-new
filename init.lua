@@ -12,3 +12,7 @@ require("config.lspconfig.setup")
 
 -------- Fzf -------- 
 require("config.fzf.keymaps")
+
+-------- Lsplines -------- 
+require("config.diagnostics.setup")
+
