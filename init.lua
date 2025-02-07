@@ -15,4 +15,3 @@ require("config.fzf.keymaps")
 
 -------- Lsplines -------- 
 require("config.diagnostics.setup")
-
