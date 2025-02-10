@@ -1,5 +1,6 @@
 return {
 	"stevearc/oil.nvim",
+	keys = { "<leader>o" },
 	opts = {
 		keymaps = {
 			["b"] = { "actions.parent", mode = "n" },
@@ -10,4 +11,5 @@ return {
 		require("oil").setup(opts)
 		vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
 	end,
+	lazy = true
 }

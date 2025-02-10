@@ -13,6 +13,7 @@ end
 return {
 	"neovim/nvim-lspconfig",
 	opts = {},
+	event = "BufEnter",
 	dependencies = {
 		{
 			"hrsh7th/cmp-nvim-lsp",
@@ -39,5 +40,6 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach
 		})
-	end
+	end,
+	lazy = true
 }
