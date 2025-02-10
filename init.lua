@@ -4,5 +4,5 @@ require("config.lazy.setup")
 --------  General --------
 require("config.general.settings")
 
--------- Lsplines --------
+-------- Diagnostics --------
 require("config.diagnostics.setup")
