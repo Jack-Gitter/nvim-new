@@ -10,13 +10,17 @@ local on_attach = function(client, bufnr)
 	end
 end
 
-
 return {
 	"neovim/nvim-lspconfig",
 	opts = {},
+	dependencies = {
+		{
+			"hrsh7th/cmp-nvim-lsp",
+		},
+	},
 	config = function()
 		local lspconfig = require("lspconfig")
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		lspconfig.lua_ls.setup({
 			capabilities = capabilities,
@@ -26,7 +30,14 @@ return {
 			}
 		})
 
-		lspconfig.ts_ls.setup({ capabilities = capabilities, on_attach = on_attach })
-		lspconfig.eslint.setup({ capabilities = capabilities, on_attach = on_attach })
+		lspconfig.ts_ls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach
+		})
+
+		lspconfig.eslint.setup({
+			capabilities = capabilities,
+			on_attach = on_attach
+		})
 	end
 }
