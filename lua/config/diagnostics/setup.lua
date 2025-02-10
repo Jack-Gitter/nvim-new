@@ -10,10 +10,14 @@ vim.diagnostic.config({
 		linehl = {
 			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
 			[vim.diagnostic.severity.WARN] = 'WarningMsg',
+			[vim.diagnostic.severity.INFO] = 'InfoMsg',
+			[vim.diagnostic.severity.HINT] = 'HintMsg',
 		},
 		numhl = {
 			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
 			[vim.diagnostic.severity.WARN] = 'WarningMsg',
+			[vim.diagnostic.severity.INFO] = 'InfoMsg',
+			[vim.diagnostic.severity.HINT] = 'HintMsg',
 		},
 	},
 })
