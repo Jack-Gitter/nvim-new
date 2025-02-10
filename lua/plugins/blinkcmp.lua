@@ -5,9 +5,9 @@ return {
 	opts = {
 		keymap = {
 			preset = 'default',
-			["<C-j>"] = {'select_next', 'fallback'},
-			["<C-k>"] = {'select_prev', 'fallback'},
-			["<C-CR>"] = {'select_and_accept', 'fallback'}
+			["<C-j>"] = { 'select_next', 'fallback' },
+			["<C-k>"] = { 'select_prev', 'fallback' },
+			["<C-CR>"] = { 'select_and_accept', 'fallback' }
 		},
 	},
 }
