@@ -18,6 +18,10 @@ return {
 		{
 			"hrsh7th/cmp-nvim-lsp",
 		},
+		{
+			"williamboman/mason-lspconfig.nvim",
+			opts = { ensure_installed = { "lua_ls", "ts_ls" } }
+		}
 	},
 	config = function()
 		local lspconfig = require("lspconfig")

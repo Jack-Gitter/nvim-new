@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason.nvim",
+	cmd = "Mason",
 	opts = {
 		ui = {
 			icons = {
@@ -8,5 +9,6 @@ return {
 				package_uninstalled = "✗"
 			}
 		}
-	}
+	},
+	lazy = true
 }
