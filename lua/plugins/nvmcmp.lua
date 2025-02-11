@@ -13,6 +13,9 @@ return {
 		},
 		{
 			"saadparwaiz1/cmp_luasnip"
+		},
+		{
+			"hrsh7th/cmp-nvim-lua"
 		}
 	},
 	opts = {
@@ -22,6 +25,7 @@ return {
 		sources = {
 			{ name = "nvim_lsp" },
 			{ name = 'luasnip' },
+			{ name = 'nvim_lua' },
 			{ name = "buffer" }
 		},
 	},
