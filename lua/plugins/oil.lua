@@ -11,5 +11,4 @@ return {
 		require("oil").setup(opts)
 		vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
 	end,
-	lazy = true
 }

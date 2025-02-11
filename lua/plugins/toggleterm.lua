@@ -10,5 +10,4 @@ return {
 			title_pos = 'center'
 		}
 	},
-	lazy = true
 }

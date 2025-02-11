@@ -24,5 +24,4 @@ return {
 		}
 		cmp.setup(opts)
 	end,
-	lazy = true
 }

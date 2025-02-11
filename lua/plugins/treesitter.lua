@@ -7,5 +7,4 @@ return {
 			enable = true
 		}
 	},
-	lazy = true
 }

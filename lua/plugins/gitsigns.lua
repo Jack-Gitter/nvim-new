@@ -9,5 +9,4 @@ return {
 		vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk)
 		vim.keymap.set("n", "<leader>gb", gitsigns.blame)
 	end,
-	lazy = true
 }

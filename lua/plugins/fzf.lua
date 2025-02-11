@@ -11,5 +11,4 @@ return {
 		vim.keymap.set("n", "<leader>gd", "<Cmd>FzfLua lsp_definitions<CR>")
 		vim.keymap.set("n", "<leader>fr", "<Cmd>FzfLua lsp_references<CR>")
 	end,
-	lazy = true
 }
