@@ -8,8 +8,16 @@ return {
 		{
 			"hrsh7th/cmp-nvim-lsp",
 		},
+		{
+			"L3MON4D3/LuaSnip",
+			version = "v2.*",
+			build = "make install_jsregexp"
+		},
 	},
 	opts = {
+		snippet = {
+			expand = function(args) require("luasnip").lsp_expand(args.body) end
+		},
 		sources = {
 			{ name = "nvim_lsp" },
 			{ name = "buffer" }
