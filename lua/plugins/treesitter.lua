@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = "BufEnter",
+	event = { "BufReadPost", "BufNewFile" },
 	opts = {
 		ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "javascript", "typescript" },
 		highlight = {

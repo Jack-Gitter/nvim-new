@@ -13,7 +13,7 @@ end
 return {
 	"neovim/nvim-lspconfig",
 	opts = {},
-	event = "BufEnter",
+	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
 		{
 			"hrsh7th/cmp-nvim-lsp",
