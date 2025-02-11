@@ -10,8 +10,6 @@ return {
 		},
 		{
 			"L3MON4D3/LuaSnip",
-			version = "v2.*",
-			build = "make install_jsregexp"
 		},
 	},
 	opts = {
@@ -20,6 +18,7 @@ return {
 		},
 		sources = {
 			{ name = "nvim_lsp" },
+			{ name = 'luasnip' },
 			{ name = "buffer" }
 		},
 	},
