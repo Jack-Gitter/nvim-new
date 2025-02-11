@@ -9,8 +9,11 @@ return {
 			"L3MON4D3/LuaSnip",
 		},
 		{
-			"hrsh7th/cmp-buffer"
+			"hrsh7th/cmp-buffer",
 		},
+		{
+			"saadparwaiz1/cmp_luasnip"
+		}
 	},
 	opts = {
 		snippet = {
