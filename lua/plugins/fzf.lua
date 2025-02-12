@@ -1,7 +1,11 @@
 return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	opts = {},
+	opts = {
+		files = {
+			previewer = false
+		}
+	},
 	keys = { "<leader>ff", "<leader>b", "<leader>gr", "<leader>gd", "<leader>fr" },
 	config = function(plugin, opts)
 		require("fzf-lua").setup(opts)
