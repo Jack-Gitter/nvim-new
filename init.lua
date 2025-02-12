@@ -1,8 +1,11 @@
 --------  Lazy --------
-require("config.lazy.setup")
+require("config.lazy")
 
 --------  General --------
-require("config.general.settings")
+require("config.general")
 
 -------- Diagnostics --------
-require("config.diagnostics.setup")
+require("config.diagnostics")
+
+-------- Autocmds --------
+require("config.autocmds")
