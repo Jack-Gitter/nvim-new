@@ -1,1 +1,1 @@
-vim.keymap.set("n", "w", ":DiffviewOpen<cr>", { buffer = true })
+vim.keymap.set("n", "m", ":DiffviewOpen<cr>", { buffer = true })
