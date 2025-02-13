@@ -11,9 +11,10 @@ return {
 			show_staged_diff = false,
 		}
 	},
-	--config = function(opts)
-	--	local neogit = require("neogit")
-	--	neogit.setup(opts)
-	--	vim.keymap.set("n", "<leader>git", function() neogit.open({ kind = "floating" }) end)
-	--end
+	config = function(opts)
+		local neogit = require("neogit")
+		print(opts.kind)
+		neogit.setup(opts)
+		vim.keymap.set("n", "<leader>git", function() neogit.open({ kind = "floating" }) end)
+	end
 }
