@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<Esc>", ":tabclose <cr>", { buffer = true })
+vim.keymap.set("n", "<esc>", ":tabclose <cr>", { buffer = true })
