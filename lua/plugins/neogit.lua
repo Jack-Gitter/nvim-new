@@ -3,11 +3,17 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"sindrets/diffview.nvim",
-		"ibhagwan/fzf-lua",
+		"ibhagwan/fzf-lua", },
+	opts = {
+		kind = "floating",
+		commit_editor = {
+			kind = "floating",
+			show_staged_diff = false,
+		}
 	},
-	config = function()
+	config = function(opts)
 		local neogit = require("neogit")
-		neogit.setup()
+		neogit.setup(opts)
 		vim.keymap.set("n", "<leader>git", function() neogit.open({ kind = "floating" }) end)
 	end
 }
