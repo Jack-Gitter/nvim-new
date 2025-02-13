@@ -33,6 +33,7 @@ return {
 			}
 		}
 	},
+	keys = { "<leader>git" },
 	config = function(_, opts)
 		local neogit = require("neogit")
 		neogit.setup(opts)

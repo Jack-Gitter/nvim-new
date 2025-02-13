@@ -3,5 +3,6 @@ return {
 	opts = {
 		timeout = "3000",
 		render = "simple"
-	}
+	},
+	enabled = false
 }
