@@ -5,12 +5,10 @@ return {
 		{
 			"sindrets/diffview.nvim",
 			config = function()
-				vim.api.nvim_create_autocmd("BufWinEnter", {
-					pattern = "*",
+				vim.api.nvim_create_autocmd("FileType", {
+					pattern = "DiffviewFiles",
 					callback = function()
-						if vim.bo.filetype == "DiffviewFiles" then
-							vim.keymap.set("n", "<esc>", ":DiffviewClose<cr>", { buffer = true })
-						end
+						vim.keymap.set("n", "<esc>", ":DiffviewClose<cr>", { buffer = true })
 					end
 				})
 			end
@@ -40,7 +38,7 @@ return {
 		neogit.setup(opts)
 		vim.keymap.set("n", "<leader>git", function() neogit.open() end)
 		vim.keymap.set("n", "<leader>gc", function() neogit.open({ "commit" }) end)
-		vim.api.nvim_create_autocmd("BufWinEnter", {
+		vim.api.nvim_create_autocmd("FileType", {
 			pattern = "NeogitStatus",
 			callback = function()
 				vim.keymap.set("n", "<esc>", ":bd<cr>", { buffer = true })

@@ -8,5 +8,11 @@ return {
 		vim.keymap.set("n", "<leader>hr", gitsigns.reset_hunk)
 		vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk)
 		vim.keymap.set("n", "<leader>bl", gitsigns.blame)
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "gitsigns-blame",
+			callback = function()
+				vim.keymap.set("n", "<esc>", ":bd<cr>", { buffer = true })
+			end
+		})
 	end,
 }
