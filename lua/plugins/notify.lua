@@ -1,11 +1,13 @@
 return {
 	"rcarriga/nvim-notify",
 	opts = {
-		timeout = "3000",
+		timeout = "2000",
 		render = "simple"
 	},
-	config = function()
-		vim.notify = require("notify").notify
+	config = function(opts)
+		local notify = require("notify")
+		notify.setup(opts)
+		vim.notify = notify.notify
 	end
 
 }
