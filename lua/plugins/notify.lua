@@ -4,5 +4,8 @@ return {
 		timeout = "3000",
 		render = "simple"
 	},
-	enabled = false
+	config = function()
+		vim.notify = require("notify").notify
+	end
+
 }
