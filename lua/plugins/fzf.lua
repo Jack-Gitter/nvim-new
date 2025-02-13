@@ -7,7 +7,7 @@ return {
 		}
 	},
 	keys = { "<leader>ff", "<leader>b", "<leader>gr", "<leader>gd", "<leader>fr" },
-	config = function(plugin, opts)
+	config = function(_, opts)
 		require("fzf-lua").setup(opts)
 		vim.keymap.set("n", "<leader>ff", "<Cmd>FzfLua files<CR>")
 		vim.keymap.set("n", "<leader>bu", "<Cmd>FzfLua buffers<CR>")

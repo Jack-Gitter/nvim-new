@@ -7,7 +7,7 @@ return {
 		},
 	},
 	dependencies = { { "echasnovski/mini.icons", opts = {} } },
-	config = function(plugin, opts)
+	config = function(_, opts)
 		require("oil").setup(opts)
 		vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
 	end,
