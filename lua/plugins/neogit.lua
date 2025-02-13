@@ -23,9 +23,11 @@ return {
 		log_view = {
 			kind = "floating",
 		},
-		integrations = {
-			diffview = true,
-		},
+		mappings = {
+			popup = {
+				["w"] = false
+			}
+		}
 	},
 	config = function(_, opts)
 		local neogit = require("neogit")
