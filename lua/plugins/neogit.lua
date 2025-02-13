@@ -6,14 +6,17 @@ return {
 			"sindrets/diffview.nvim",
 			config = function()
 				vim.api.nvim_create_autocmd("BufWinEnter", {
-					pattern = "DiffviewFiles",
+					pattern = "*",
 					callback = function()
-						vim.keymap.set("n", "<esc>", ":tabclose <cr>", { buffer = true })
+						if vim.bo.filetype == "DiffviewFiles" then
+							vim.keymap.set("n", "<esc>", ":DiffviewClose<cr>", { buffer = true })
+						end
 					end
 				})
 			end
 		},
-		{ "ibhagwan/fzf-lua" }, },
+		{ "ibhagwan/fzf-lua" },
+	},
 	opts = {
 		kind = "floating",
 		commit_editor = {
