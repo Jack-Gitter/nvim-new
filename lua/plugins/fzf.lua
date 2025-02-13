@@ -14,5 +14,6 @@ return {
 		vim.keymap.set("n", "<leader>gr", "<Cmd>FzfLua live_grep<CR>")
 		vim.keymap.set("n", "<leader>gd", "<Cmd>FzfLua lsp_definitions<CR>")
 		vim.keymap.set("n", "<leader>fr", "<Cmd>FzfLua lsp_references<CR>")
+		vim.keymap.set("n", "<leader>gb", "<Cmd>FzfLua git_branches<CR>")
 	end,
 }

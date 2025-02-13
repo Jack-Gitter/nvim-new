@@ -7,6 +7,6 @@ return {
 		gitsigns.setup(opts)
 		vim.keymap.set("n", "<leader>hr", gitsigns.reset_hunk)
 		vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk)
-		vim.keymap.set("n", "<leader>gb", gitsigns.blame)
+		vim.keymap.set("n", "<leader>bl", gitsigns.blame)
 	end,
 }
