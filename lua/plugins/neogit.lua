@@ -9,11 +9,25 @@ return {
 		commit_editor = {
 			kind = "floating",
 			show_staged_diff = false,
-		}
+		},
+		commit_select_view = {
+			kind = "floating",
+		},
+		commit_view = {
+			kind = "floating",
+			verify_commit = vim.fn.executable("gpg") == 1,
+		},
+		popup = {
+			kind = "floating",
+		},
+		log_view = {
+			kind = "floating",
+		},
 	},
 	config = function(_, opts)
 		local neogit = require("neogit")
 		neogit.setup(opts)
-		vim.keymap.set("n", "<leader>git", function() neogit.open({ kind = "floating" }) end)
+		vim.keymap.set("n", "<leader>git", function() neogit.open() end)
+		vim.keymap.set("n", "<leader>gc", function() neogit.open({ "commit" }) end)
 	end
 }
