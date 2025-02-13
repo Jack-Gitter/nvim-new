@@ -1,9 +1,19 @@
 return {
 	"NeogitOrg/neogit",
 	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"sindrets/diffview.nvim",
-		"ibhagwan/fzf-lua", },
+		{ "nvim-lua/plenary.nvim" },
+		{
+			"sindrets/diffview.nvim",
+			config = function()
+				vim.api.nvim_create_autocmd("BufWinEnter", {
+					pattern = "DiffviewFiles",
+					callback = function()
+						vim.keymap.set("n", "<esc>", ":tabclose <cr>", { buffer = true })
+					end
+				})
+			end
+		},
+		{ "ibhagwan/fzf-lua" }, },
 	opts = {
 		kind = "floating",
 		commit_editor = {
@@ -27,5 +37,11 @@ return {
 		neogit.setup(opts)
 		vim.keymap.set("n", "<leader>git", function() neogit.open() end)
 		vim.keymap.set("n", "<leader>gc", function() neogit.open({ "commit" }) end)
+		vim.api.nvim_create_autocmd("BufWinEnter", {
+			pattern = "NeogitStatus",
+			callback = function()
+				vim.keymap.set("n", "<esc>", ":bd<cr>", { buffer = true })
+			end
+		})
 	end
 }
