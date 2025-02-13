@@ -13,13 +13,6 @@ return {
 		commit_select_view = {
 			kind = "floating",
 		},
-		commit_view = {
-			kind = "floating",
-			verify_commit = vim.fn.executable("gpg") == 1,
-		},
-		popup = {
-			kind = "floating",
-		},
 		log_view = {
 			kind = "floating",
 		},
