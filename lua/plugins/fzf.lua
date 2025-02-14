@@ -9,7 +9,9 @@ return {
 		}
 	},
 	config = function(_, opts)
-		require("fzf-lua").setup(opts)
+		local fzf = require("fzf-lua")
+		fzf.setup(opts)
+		fzf.register_ui_select()
 		vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>")
 		vim.keymap.set("n", "<leader>bu", "<cmd>FzfLua buffers<cr>")
 		vim.keymap.set("n", "<leader>gr", "<cmd>FzfLua live_grep<cr>")
