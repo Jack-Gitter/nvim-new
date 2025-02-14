@@ -20,7 +20,7 @@ return {
 			port = "9999",
 			executable = {
 				command = "node",
-				args = { "/Users/jack.gitter/.local/share/nvim/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js", "9999" },
+				args = { string.format('%s/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js', vim.fn.stdpath('data')), "9999" }
 			}
 		}
 		dap.configurations.javascript = {
