@@ -37,7 +37,7 @@ return {
 	config = function(_, opts)
 		local neogit = require("neogit")
 		neogit.setup(opts)
-		vim.keymap.set("n", "<leader>git", function() neogit.open() end)
+		vim.keymap.set("n", "<leader>git", neogit.open)
 		vim.keymap.set("n", "<leader>gc", function() neogit.open({ "commit" }) end)
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = "NeogitStatus",
