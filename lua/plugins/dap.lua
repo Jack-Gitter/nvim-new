@@ -43,5 +43,6 @@ return {
 		}
 		vim.keymap.set("n", "<leader>tb", dap.toggle_breakpoint)
 		vim.keymap.set("n", "<leader>dg", dap.continue)
+		vim.keymap.set("n", "<leader>ds", function() dap.disconnect({ terminateDebuggee = true }) end)
 	end
 }
