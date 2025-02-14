@@ -32,9 +32,9 @@ return {
 	config = function(_, opts)
 		local cmp = require("cmp")
 		opts.mapping = {
-			["<C-j>"] = cmp.select_next_item,
-			["<C-k>"] = cmp.select_prev_item(),
-			["<C-CR>"] = cmp.confirm(),
+			["<C-j>"] = function() cmp.select_next_item() end,
+			["<C-k>"] = function() cmp.select_prev_item() end,
+			["<C-CR>"] = function() cmp.confirm() end
 		}
 		cmp.setup(opts)
 	end,
