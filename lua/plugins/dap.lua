@@ -1,4 +1,16 @@
 return {
+	dependencies = {
+		{
+			"williamboman/mason.nvim",
+			opts = {}
+		},
+		{
+			"jay-babu/mason-nvim-dap.nvim",
+			opts = {
+				ensure_installed = { 'js' },
+			}
+		}
+	},
 	"mfussenegger/nvim-dap",
 	config = function()
 		local dap = require("dap")
@@ -12,6 +24,15 @@ return {
 			}
 		}
 		dap.configurations.javascript = {
+			{
+				type = "pwa-node",
+				request = "launch",
+				name = "Launch file",
+				program = "${file}",
+				cwd = "${workspaceFolder}",
+			},
+		}
+		dap.configurations.typescript = {
 			{
 				type = "pwa-node",
 				request = "launch",
