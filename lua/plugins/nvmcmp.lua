@@ -1,14 +1,8 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
 		{
-			"L3MON4D3/LuaSnip",
-			event = { "BufReadPost", "BufNewFile" },
-			dependencies = { "rafamadriz/friendly-snippets" },
-			config = function()
-				require("luasnip.loaders.from_vscode").lazy_load()
-			end,
+			"LuaSnip"
 		},
 		{
 			"hrsh7th/cmp-nvim-lsp",
@@ -43,4 +37,5 @@ return {
 		}
 		cmp.setup(opts)
 	end,
+	event = { "BufReadPost", "BufNewFile" },
 }

@@ -1,4 +1,4 @@
 return {
-	keys = { "/" },
 	"romainl/vim-cool",
+	keys = { "/" },
 }

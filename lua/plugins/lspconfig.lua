@@ -1,20 +1,17 @@
 return {
+	"neovim/nvim-lspconfig",
 	dependencies = {
+		{
+			"mason.nvim",
+		},
+		{
+			"mason-lspconfig.nvim",
+		},
 		{
 			"hrsh7th/cmp-nvim-lsp",
 		},
-		{
-			"williamboman/mason.nvim",
-			opts = {},
-		},
-		{
-			"williamboman/mason-lspconfig.nvim",
-			opts = { ensure_installed = { "lua_ls", "ts_ls" } }
-		}
 	},
-	"neovim/nvim-lspconfig",
 	opts = {},
-	event = { "BufReadPost", "BufNewFile" },
 	config = function()
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -50,4 +47,5 @@ return {
 			on_attach = on_attach
 		})
 	end,
+	event = { "BufReadPost", "BufNewFile" },
 }

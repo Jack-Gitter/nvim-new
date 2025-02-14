@@ -1,6 +1,5 @@
 return {
 	"lewis6991/gitsigns.nvim",
-	event = "BufEnter",
 	opts = {},
 	config = function(_, opts)
 		local gitsigns = require("gitsigns")
@@ -15,4 +14,5 @@ return {
 			end
 		})
 	end,
+	event = "BufEnter",
 }

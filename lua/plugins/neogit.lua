@@ -1,19 +1,15 @@
 return {
 	"NeogitOrg/neogit",
 	dependencies = {
-		{ "nvim-lua/plenary.nvim" },
 		{
-			"sindrets/diffview.nvim",
-			config = function()
-				vim.api.nvim_create_autocmd("FileType", {
-					pattern = "DiffviewFiles",
-					callback = function()
-						vim.keymap.set("n", "<esc>", ":DiffviewClose<cr>", { buffer = true })
-					end
-				})
-			end
+			"diffview.nvim",
 		},
-		{ "ibhagwan/fzf-lua" },
+		{
+			"nvim-lua/plenary.nvim"
+		},
+		{
+			"ibhagwan/fzf-lua"
+		},
 	},
 	opts = {
 		kind = "floating",
@@ -33,7 +29,6 @@ return {
 			}
 		}
 	},
-	keys = { "<leader>git" },
 	config = function(_, opts)
 		local neogit = require("neogit")
 		neogit.setup(opts)
@@ -45,5 +40,6 @@ return {
 				vim.keymap.set("n", "<esc>", ":bd<cr>", { buffer = true })
 			end
 		})
-	end
+	end,
+	keys = { "<leader>git" },
 }

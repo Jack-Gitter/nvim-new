@@ -1,12 +1,13 @@
 return {
 	"ibhagwan/fzf-lua",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons"
+	},
 	opts = {
 		files = {
 			previewer = false
 		}
 	},
-	keys = { "<leader>ff", "<leader>b", "<leader>gr", "<leader>gd", "<leader>fr" },
 	config = function(_, opts)
 		require("fzf-lua").setup(opts)
 		vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<cr>")
@@ -17,4 +18,5 @@ return {
 		vim.keymap.set("n", "<leader>gb", "<cmd>FzfLua git_branches<cr>")
 		vim.keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_document_diagnostics<cr>")
 	end,
+	keys = { "<leader>ff", "<leader>b", "<leader>gr", "<leader>gd", "<leader>fr" },
 }
