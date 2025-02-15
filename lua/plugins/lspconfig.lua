@@ -17,7 +17,7 @@ return {
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		local on_attach = function(client, bufnr)
-			vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = 0 })
+			vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = true })
 			if client.supports_method("textDocument/format") then
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					buffer = bufnr,

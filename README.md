@@ -3,8 +3,5 @@
 
 
 ### todo
-add one of these two plugins
-
-https://github.com/ray-x/lsp_signature.nvim
-
-https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
+read up on this to see if we can get signature help wihtout a plugin
+https://www.reddit.com/r/neovim/comments/nexn6x/lsp_stops_showing_function_signature_when_i_type/
