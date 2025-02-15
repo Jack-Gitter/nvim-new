@@ -27,6 +27,9 @@ return {
 			{ name = 'nvim_lua' },
 			{ name = "buffer" },
 		},
+		experimental = {
+			ghost_text = true,
+		},
 	},
 	config = function(_, opts)
 		local cmp = require("cmp")

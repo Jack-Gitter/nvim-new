@@ -3,4 +3,8 @@
 
 
 ### todo
-get signature help working -- through nvim-cmp. When i type a method and select it, it should autofil
+add one of these two plugins
+
+https://github.com/ray-x/lsp_signature.nvim
+
+https://github.com/hrsh7th/cmp-nvim-lsp-signature-help
