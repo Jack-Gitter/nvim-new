@@ -39,12 +39,22 @@ return {
 
 		lspconfig.ts_ls.setup({
 			capabilities = capabilities,
-			on_attach = on_attach
+			on_attach = on_attach,
+			settings = {
+				completions = {
+					completeFunctionCalls = true
+				}
+			},
 		})
 
 		lspconfig.eslint.setup({
 			capabilities = capabilities,
-			on_attach = on_attach
+			on_attach = on_attach,
+			settings = {
+				completions = {
+					completeFunctionCalls = true
+				}
+			},
 		})
 	end,
 	event = { "BufReadPost", "BufNewFile" },
