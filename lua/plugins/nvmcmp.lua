@@ -5,6 +5,9 @@ return {
 			"LuaSnip"
 		},
 		{
+			"lsp_signature.nvim",
+		},
+		{
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		{
@@ -26,9 +29,7 @@ return {
 			{ name = 'luasnip' },
 			{ name = 'nvim_lua' },
 			{ name = "buffer" },
-		},
-		experimental = {
-			ghost_text = true,
+			{ name = "nvim_lsp_signature_help" }
 		},
 	},
 	config = function(_, opts)
