@@ -2,7 +2,8 @@ return {
 	"rcarriga/nvim-notify",
 	opts = {
 		timeout = "2000",
-		render = "simple"
+		render = "simple",
+		background_color = "#000000"
 	},
 	config = function(opts)
 		local notify = require("notify")
