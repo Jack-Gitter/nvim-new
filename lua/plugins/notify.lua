@@ -3,7 +3,7 @@ return {
 	opts = {
 		timeout = "2000",
 		render = "simple",
-		background_color = "#000000"
+		background_colour = "#000000"
 	},
 	config = function(opts)
 		local notify = require("notify")
