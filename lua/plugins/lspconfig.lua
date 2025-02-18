@@ -33,6 +33,12 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
+				workspace = {
+					checkThirdParty = false,
+					ignoreDir = { "~/.local/share/nvim/" },
+					library = {
+					},
+				},
 				Lua = { diagnostics = { globals = { 'vim' } } }
 			}
 		})
