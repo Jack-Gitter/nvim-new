@@ -33,14 +33,22 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = {
-				workspace = {
-					checkThirdParty = false,
-					ignoreDir = { "~/.local/share/nvim/" },
-					library = {
-					},
-				},
-				Lua = { diagnostics = { globals = { 'vim' } } }
+				Lua = {
+					diagnostics = {
+						globals = { 'vim' }
+					}
+				}
 			}
+		})
+
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = {
+				gopls = {
+					symbolScope = "workspace",
+				}
+			},
 		})
 
 		lspconfig.ts_ls.setup({

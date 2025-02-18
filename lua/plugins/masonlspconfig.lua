@@ -3,7 +3,8 @@ return {
 	opts = {
 		ensure_installed = {
 			"lua_ls",
-			"ts_ls"
+			"ts_ls",
+			"gopls"
 		}
 	}
 }
