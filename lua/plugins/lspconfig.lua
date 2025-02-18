@@ -34,12 +34,18 @@ return {
 			on_attach = on_attach,
 			settings = {
 				Lua = {
+					workspace = {
+						checkThirdParty = "Disable",
+						ignoreDir = { "~/.local/" },
+					},
 					diagnostics = {
+						libraryFiles = "Disable",
 						globals = { 'vim' }
 					}
 				}
 			}
 		})
+
 
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
