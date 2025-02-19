@@ -10,7 +10,7 @@ return {
         vim.api.nvim_create_autocmd("FileType", {
             pattern = "gitsigns-blame",
             callback = function()
-                vim.keymap.set("n", "<esc>", ":bd<cr>", { buffer = true })
+                vim.keymap.set("n", "<esc>", ":q<cr>", { buffer = true })
             end
         })
     end,
