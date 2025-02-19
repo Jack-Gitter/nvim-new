@@ -5,9 +5,6 @@ return {
             "LuaSnip"
         },
         {
-            "lsp_signature.nvim",
-        },
-        {
             "hrsh7th/cmp-nvim-lsp",
         },
         {
