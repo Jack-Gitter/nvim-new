@@ -17,6 +17,9 @@ return {
 			kind = "floating",
 			show_staged_diff = false,
 		},
+		preview_buffer = {
+			kind = "floating",
+		},
 		commit_select_view = {
 			kind = "floating",
 		},
