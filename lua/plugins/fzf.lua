@@ -7,8 +7,8 @@ return {
         actions = {
             files = {
                 true,
-                ["ctrl-h"] = require("fzf-lua").actions.toggle_ignore,
-                ["ctrl-i"] = require("fzf-lua").actions.toggle_hidden,
+                ["ctrl-i"] = require("fzf-lua").actions.toggle_ignore,
+                ["ctrl-h"] = require("fzf-lua").actions.toggle_hidden,
             }
         },
         files = {
