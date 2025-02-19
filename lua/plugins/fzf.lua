@@ -25,10 +25,10 @@ return {
 
         vim.keymap.set("n", "<leader>ff", function() fzf.files({ cwd = ws() }) end)
         vim.keymap.set("n", "<leader>gr", function() fzf.live_grep({ cwd = ws() }) end)
-        vim.keymap.set("n", "<leader>gr", fzf.lsp_workspace_diagnostics)
+        vim.keymap.set("n", "<leader>wd", fzf.lsp_workspace_diagnostics)
         vim.keymap.set("n", "<leader>bu", fzf.buffers)
         vim.keymap.set("n", "<leader>gb", fzf.git_branches)
-        vim.keymap.set("n", "<leader>wd", fzf.lsp_live_workspace_symbols)
+        vim.keymap.set("n", "<leader>ws", fzf.lsp_live_workspace_symbols)
         vim.keymap.set("n", "<leader>fd", fzf.lsp_document_diagnostics)
         vim.keymap.set("n", "<leader>gd", fzf.lsp_definitions)
         vim.keymap.set("n", "<leader>ca", fzf.lsp_code_actions)
