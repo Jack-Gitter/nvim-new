@@ -20,7 +20,11 @@ return {
         local on_attach = function(client, bufnr)
             local augroup = vim.api.nvim_create_augroup("LSP", {})
             vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = true })
-            if client.supports_method("textDocument/formatting") and vim.bo.filetype ~= "python" then
+            if client.supports_method("textDocument/formatting") then
+                local ft = vim.bo.filetype
+                if ft == "python" or ft == "javascript" or ft == "typescript" then
+                    return
+                end
                 vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
                 vim.api.nvim_create_autocmd("BufWritePre", {
                     group = augroup,
@@ -84,6 +88,15 @@ return {
                     completeFunctionCalls = true
                 }
             },
+        })
+
+        lspconfig.eslint.setup({
+            on_attach = function(_, bufnr)
+                vim.api.nvim_create_autocmd("BufWritePre", {
+                    buffer = bufnr,
+                    command = "EslintFixAll",
+                })
+            end,
         })
     end,
     event = { "BufReadPost", "BufNewFile" },

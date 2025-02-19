@@ -5,7 +5,8 @@ return {
             "lua_ls",
             "ts_ls",
             "gopls",
-            "pyright"
+            "pyright",
+            "eslint"
         }
     }
 }
