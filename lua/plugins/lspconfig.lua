@@ -15,11 +15,12 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 
 		local on_attach = function(client, bufnr)
 			vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = true })
-			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-			if client.supports_method("textDocument/formatting") and vim.bo.filetype ~= "python" then
+			if client.supports_method("textDocument/formatting") then
 				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					group = augroup,
