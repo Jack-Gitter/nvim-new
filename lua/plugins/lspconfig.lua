@@ -15,15 +15,23 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 		local on_attach = function(client, bufnr)
 			vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = true })
+			if vim.bo.filetype == "python" then
+				return
+			end
 			if client.supports_method("textDocument/format") then
+				vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 				vim.api.nvim_create_autocmd("BufWritePre", {
+					group = augroup,
 					buffer = bufnr,
 					callback = function()
 						vim.lsp.buf.format({ bufnr = bufnr, id = client.id })
-						vim.diagnostic.enable()
+						if vim.bo.filetype == "lua" then
+							vim.diagnostic.enable()
+						end
 					end
 				})
 			end
