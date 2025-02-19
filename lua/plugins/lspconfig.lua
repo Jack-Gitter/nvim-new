@@ -32,7 +32,7 @@ return {
                 })
             end
             if client.supports_method("textDocument/signatureHelp") then
-                vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { noremap = true })
+                vim.keymap.set("i", "<c-s>", vim.lsp.buf.signature_help, { noremap = true })
                 vim.api.nvim_create_autocmd({ "CursorHoldI" }, {
                     buffer = bufnr,
                     callback = function()
