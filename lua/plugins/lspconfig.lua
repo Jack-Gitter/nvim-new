@@ -76,16 +76,6 @@ return {
                 }
             },
         })
-
-        lspconfig.eslint.setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            settings = {
-                completions = {
-                    completeFunctionCalls = true
-                }
-            },
-        })
     end,
     event = { "BufReadPost", "BufNewFile" },
 }
