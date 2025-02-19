@@ -18,9 +18,9 @@ return {
 
 
         local on_attach = function(client, bufnr)
+            local augroup = vim.api.nvim_create_augroup("LSP", {})
             vim.keymap.set("n", "<leader>ho", vim.lsp.buf.hover, { buffer = true })
             if client.supports_method("textDocument/formatting") and vim.bo.filetype ~= "python" then
-                local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
                 vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
                 vim.api.nvim_create_autocmd("BufWritePre", {
                     group = augroup,
@@ -31,6 +31,15 @@ return {
                             vim.diagnostic.enable()
                         end
                     end
+                })
+            end
+            if client.supports_method("textDocument/signatureHelp") then
+                vim.api.nvim_create_autocmd({ "CursorHoldI" }, {
+                    pattern = "*",
+                    group = augroup,
+                    callback = function()
+                        vim.lsp.buf.signature_help()
+                    end,
                 })
             end
         end
