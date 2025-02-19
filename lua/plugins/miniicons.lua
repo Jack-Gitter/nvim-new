@@ -1,4 +1,4 @@
 return {
-	"echasnovski/mini.icons",
-	opts = {}
+    "echasnovski/mini.icons",
+    opts = {}
 }

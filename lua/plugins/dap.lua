@@ -1,6 +1,6 @@
 return {
-	"mfussenegger/nvim-dap",
-	dependencies = {
-		"fzf-lua"
-	},
+    "mfussenegger/nvim-dap",
+    dependencies = {
+        "fzf-lua"
+    },
 }
