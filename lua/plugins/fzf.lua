@@ -12,7 +12,11 @@ return {
             }
         },
         files = {
-            previewer = false
+            previewer = false,
+            no_ignore = true
+        },
+        grep = {
+            no_ignore = false
         }
     },
     config = function(_, opts)
