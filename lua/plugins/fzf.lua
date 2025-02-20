@@ -4,13 +4,7 @@ return {
         "nvim-tree/nvim-web-devicons"
     },
     opts = {
-        actions = {
-            files = {
-                true,
-                ["ctrl-i"] = require("fzf-lua").actions.toggle_ignore,
-                ["ctrl-h"] = require("fzf-lua").actions.toggle_hidden,
-            }
-        },
+        actions = { files = {} },
         files = {
             previewer = false,
         },
@@ -20,6 +14,12 @@ return {
     },
     config = function(_, opts)
         local fzf = require("fzf-lua")
+
+        opts.actions.files = {
+            true,
+            ["ctrl-i"] = require("fzf-lua").actions.toggle_ignore,
+            ["ctrl-h"] = require("fzf-lua").actions.toggle_hidden
+        }
 
         fzf.setup(opts)
         fzf.register_ui_select()
