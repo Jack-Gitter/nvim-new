@@ -9,5 +9,3 @@ require("config.diagnostics")
 
 -------- Autocmds --------
 require("config.autocmds")
-
-require("config.myplugin")
