@@ -8,7 +8,7 @@ return {
             port = "${port}",
             executable = {
                 command = "node",
-                args = { vim.fn.stdpath("data") .. "hello world", "${port}" },
+                args = { vim.fn.stdpath("data") .. "/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js", "${port}" },
             }
         }
         dap.configurations.javascript = {
@@ -19,6 +19,13 @@ return {
                 program = "${file}",
                 cwd = "${workspaceFolder}",
             },
+            {
+                type = "pwa-node",
+                request = "attach",
+                name = "Attach",
+                processId = require 'dap.utils'.pick_process,
+                cwd = "${workspaceFolder}",
+            }
         }
     end
 }
