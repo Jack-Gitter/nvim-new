@@ -13,7 +13,6 @@ return {
         },
         files = {
             previewer = false,
-            no_ignore = true
         },
         grep = {
             no_ignore = false
