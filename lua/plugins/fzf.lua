@@ -44,5 +44,4 @@ return {
         vim.keymap.set("n", "<leader>ca", fzf.lsp_code_actions)
         vim.keymap.set("n", "<leader>fr", fzf.lsp_references)
     end,
-    keys = { "<leader>ff", "<leader>b", "<leader>gr", "<leader>gd", "<leader>fr" },
 }
