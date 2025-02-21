@@ -31,7 +31,7 @@ return {
             {
                 type = "pwa-node",
                 request = "launch",
-                name = "Launch file",
+                name = "Launch file with node",
                 program = "${file}",
                 cwd = "${workspaceFolder}",
             },
@@ -48,7 +48,7 @@ return {
             {
                 type = "pwa-node",
                 request = "launch",
-                name = "Launch file",
+                name = "Launch file with ts-node",
                 program = "${file}",
                 cwd = "${workspaceFolder}",
                 sourceMaps = true,
@@ -56,10 +56,11 @@ return {
             {
                 type = "pwa-node",
                 request = "attach",
-                name = "Attach",
+                name = "Attach to a NestJS project",
                 processId = require('dap.utils').pick_process,
                 cwd = "${workspaceFolder}",
                 sourceMaps = true,
+                outFiles = { "${workspaceFolder}/dist/**/*.js" },
             }
         }
     end
