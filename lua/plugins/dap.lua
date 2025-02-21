@@ -15,6 +15,7 @@ return {
         vim.keymap.set('n', '<Leader>tb', function() dap.toggle_breakpoint() end)
         vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
         vim.keymap.set('n', '<Leader>dcl', function() dap.goto_() end)
+        vim.keymap.set('n', '<Leader>??', function() dap.eval(nil, { enter = true }) end)
 
         dap.adapters["pwa-node"] = {
             type = "server",
