@@ -8,9 +8,6 @@ return {
             "mason-lspconfig.nvim",
         },
         {
-            "mason-nvim-dap.nvim"
-        },
-        {
             "hrsh7th/cmp-nvim-lsp",
         },
     },
