@@ -3,4 +3,7 @@
 
 
 ### todo
+* dap
+* https://github.com/nvim-neotest/neotest test runner
 * snippets working only sometimes
+
