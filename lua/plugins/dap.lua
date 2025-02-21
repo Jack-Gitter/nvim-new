@@ -51,6 +51,7 @@ return {
                 name = "Launch file",
                 program = "${file}",
                 cwd = "${workspaceFolder}",
+                sourceMaps = true,
             },
             {
                 type = "pwa-node",
@@ -58,6 +59,7 @@ return {
                 name = "Attach",
                 processId = require('dap.utils').pick_process,
                 cwd = "${workspaceFolder}",
+                sourceMaps = true,
             }
         }
     end
