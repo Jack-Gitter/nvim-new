@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>di", vim.diagnostic.open_float)
