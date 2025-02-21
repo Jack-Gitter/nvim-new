@@ -2,13 +2,23 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
         {
-            "mason.nvim",
+            "williamboman/mason.nvim",
         },
         {
             "hrsh7th/cmp-nvim-lsp",
         },
+        {
+            "williamboman/mason-lspconfig.nvim"
+        },
+        {
+            "jay-babu/mason-nvim-dap.nvim"
+        },
     },
     config = function()
+        require("mason").setup()
+        require("mason-lspconfig").setup({ ensure_installed = { "lua_ls", "ts_ls", "gopls", "pyright", "eslint" } })
+        require("mason-nvim-dap").setup({ ensure_installed = { "js" } })
+
         local lspconfig = require("lspconfig")
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
