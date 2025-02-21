@@ -1,7 +1,12 @@
 return {
     "mfussenegger/nvim-dap",
+    dependencies = {
+        "leoluz/nvim-dap-go"
+    },
     config = function()
         local dap = require("dap")
+
+        require("dap-go").setup()
 
         vim.fn.sign_define('DapBreakpoint', { text = '🔴', texthl = '', linehl = '', numhl = '' })
         vim.fn.sign_define('DapBreakpointCondition', { text = '❓', texthl = '', linehl = '', numhl = '' })
@@ -15,7 +20,9 @@ return {
         vim.keymap.set('n', '<Leader>tb', function() dap.toggle_breakpoint() end)
         vim.keymap.set('n', '<Leader>dr', function() dap.repl.open() end)
         vim.keymap.set('n', '<Leader>dcl', function() dap.goto_() end)
-        vim.keymap.set('n', '<Leader>??', function() dap.eval(nil, { enter = true }) end)
+        vim.keymap.set({ 'n', 'v' }, '<Leader>??', function()
+            require('dap.ui.widgets').hover()
+        end)
 
         dap.adapters["pwa-node"] = {
             type = "server",
